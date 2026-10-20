@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#180f23">
+  <meta name="description" content="A little place made with love, just for Rubie.">
+  <title>A Little Place for Rubie ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="mist mist-one"></div>
+  <div class="mist mist-two"></div>
+  <div id="particles" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="A Little Place for Rubie">
+      <span class="brand-heart">♡</span> just for rubie
+    </a>
+    <span class="top-note">a little kindness, wrapped in a story</span>
+  </header>
+
+  <main>
+    <!-- INTRODUCTION -->
+    <section id="welcome" class="welcome screen">
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h1>For my <span class="script">Sugar Baby</span> ♡</h1>
+      <p class="welcome-copy">
+        A tiny little corner of the universe,<br>
+        made just for you.
+      </p>
+
+      <div class="book-scene">
+
+        <!-- ADDED: Pink heart made from Rubie's name -->
+        <div class="name-heart" aria-hidden="true">
+          <div>Rubie Joy · Rubie Joy · Rubie Joy</div>
+          <div>Rubie Joy · Rubie Joy · Rubie Joy · Rubie Joy</div>
+          <div>Rubie Joy · Rubie Joy · Rubie Joy · Rubie Joy</div>
+          <div>Rubie Joy · Rubie Joy · Rubie Joy · Rubie Joy</div>
+          <div>Rubie Joy · Rubie Joy · Rubie Joy · Rubie Joy</div>
+          <div>Rubie Joy · Rubie Joy · Rubie Joy</div>
+          <div>Rubie Joy · Rubie Joy</div>
+        </div>
+        <!-- END ADDED HEART -->
+
+        <div class="book" id="book">
+          <div class="book-pages"></div>
+          <div class="book-back"></div>
+          <div class="book-cover">
+            <div class="cover-border">
+              <span class="cover-star">✧</span>
+              <span class="cover-small">A LITTLE BOOK OF</span>
+              <span class="cover-title">Little<br>Comforts</span>
+              <span class="cover-for">for Rubie ♡</span>
+              <span class="cover-flower">❀</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="open-hint" id="openHint">tap the book when you're ready</p>
+      <button class="primary-button" id="openBook" type="button">
+        Open your little world <span>♡</span>
+      </button>
+
+      <p class="no-pressure">
+        No questions to answer. Nothing to explain.<br>
+        Just a little place to breathe.
+      </p>
+    </section>
+
+    <!-- HEART SELECTION -->
+    <section id="chapters" class="chapters screen hidden">
+      <p class="eyebrow">PICK WHATEVER YOUR HEART NEEDS</p>
+      <h2>What shall we open, <span class="script">Joy?</span></h2>
+      <p class="chapter-intro">
+        No right choice, no wrong mood.<br>
+        Choose whichever little heart feels right.
+      </p>
+
+      <div class="heart-grid">
+        <button class="heart-card" data-chapter="0" type="button">
+          <span class="heart-icon heart-rose">♥</span>
+          <span class="heart-name">Velvet</span>
+          <span class="heart-description">A little mischief</span>
+        </button>
+
+        <button class="heart-card" data-chapter="1" type="button">
+          <span class="heart-icon heart-lilac">♥</span>
+          <span class="heart-name">Midnight</span>
+          <span class="heart-description">No words needed</span>
+        </button>
+
+        <button class="heart-card" data-chapter="2" type="button">
+          <span class="heart-icon heart-peach">♥</span>
+          <span class="heart-name">Blush</span>
+          <span class="heart-description">A tiny reminder</span>
+        </button>
+
+        <button class="heart-card" data-chapter="3" type="button">
+          <span class="heart-icon heart-cream">♥</span>
+          <span class="heart-name">Daydream</span>
+          <span class="heart-description">Take your time</span>
+        </button>
+      </div>
+
+      <div class="gentle-note">
+        <span>✧</span>
+        You don't have to be okay every second.
+        <span>✧</span>
+      </div>
+
+      <button class="text-button" id="backToWelcome" type="button">
+        ↶ Back to the book
+      </button>
+    </section>
+
+    <!-- CHAPTER PAGE -->
+    <section id="poemPanel" class="poem-panel screen hidden">
+      <article class="letter-page" id="letterPage">
+        <div class="letter-top">
+          <span id="chapterNumber">A LITTLE NOTE · 01</span>
+          <span class="page-flower">✧</span>
+        </div>
+
+        <div class="letter-content" id="letterContent">
+          <!-- Populated by script.js -->
+        </div>
+
+        <div class="letter-bottom">
+          <span>made with a little love</span>
+          <span>♡</span>
+        </div>
+      </article>
+
+      <div class="page-controls">
+        <button class="secondary-button" id="previousChapter" type="button">
+          ← Hearts
+        </button>
+        <button class="primary-button" id="nextChapter" type="button">
+          Another little note →
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- MUSIC PLAYER: unchanged -->
+  <aside class="music-player" id="musicPlayer" aria-label="Music player">
+    <div class="music-art" aria-hidden="true">♫</div>
+    <div class="music-details">
+      <span class="music-label">A LITTLE SOUNDTRACK</span>
+      <span class="music-title" id="musicTitle">By Chance</span>
+      <div class="progress-track" id="progressTrack">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="music-time" id="musicTime">Ready when you are ♡</span>
+    </div>
+    <button class="music-toggle" id="musicToggle" type="button"
+      aria-label="Play music" aria-pressed="false">▶</button>
+    <audio id="backgroundMusic" src="by-chance.mp3" preload="metadata"
+      loop></audio>
+  </aside>
+
+  <footer class="footer">
+    <p>For you, Teacher. On the quiet days, too. ♡</p>
+  </footer>
+</body>
+</html>
